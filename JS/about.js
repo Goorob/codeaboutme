@@ -9,7 +9,7 @@ if ( music == 'YES'|| music == 'Y'){
     alert ('it is fine ');
 }
 }
-console.log('music', music )
+//console.log('music', music )
 var sport = prompt ( 'Do you playing any sport ? ')
 sport = sport.toUpperCase(); 
 if ( sport == 'YES'|| sport == 'Y'){
@@ -19,7 +19,7 @@ if ( sport == 'YES'|| sport == 'Y'){
     alert ("i think it's going to be good if you try to play " );
 }
 }
-console.log('sport', sport )
+//console.log('sport', sport )
 var food  = prompt ('Do you have all your meals each day ?breakfast , dinner , and lunch ?s')
 food = food.toUpperCase(); 
 if ( food == 'YES'||food == 'Y'){
@@ -29,7 +29,7 @@ if ( food == 'YES'||food == 'Y'){
     alert ("Please try to have it all it's good for your health  ");
 }
 }
-console.log( 'food '+food )
+//console.log( 'food '+food )
 var love = prompt ( 'Have you ever been inlove ?')
 love = love.toUpperCase(); 
 if ( love == 'YES'|| love == 'Y'){
@@ -39,7 +39,7 @@ if ( love == 'YES'|| love == 'Y'){
     alert ('Wish that you will oneday :) ');
 }
 }
-console.log('love', love ) ;
+//console.log('love', love ) ;
 var kid  = prompt ( 'Do you like kids?')
 kid = kid.toUpperCase(); 
 if (kid== 'YES'|| kid == 'Y'){
@@ -49,4 +49,4 @@ if (kid== 'YES'|| kid == 'Y'){
     alert (' Oh come on  :) ');
 }
 }
-console.log('kid', kid ) ;
+//console.log('kid', kid ) ;
