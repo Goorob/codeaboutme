@@ -9,8 +9,17 @@ header {
     
 }
 
+section {
+    color: gray ;
+    
+
+}
 p {
   color :purple ; 
  background-color : grey ; 
  text-align: center ; 
+}
+ul  {
+    color: grey ;
+    
 }
