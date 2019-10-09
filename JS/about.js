@@ -1,123 +1,94 @@
 'use strict';
-var mark =0 ;
+var mark = 0;
 var name = prompt('What is your name ?');
-alert('hello '+ name )
-var music = prompt('Do you feel relax when you listening to music ?')
-music = music.toUpperCase();
-if (music == 'YES' || music == 'Y') {
-    alert('Ohh nice :)');
-    mark = mark + 1 ;
-} else {
-    if (music == 'NO' || music == 'N') {
-        alert('it is fine ');
+alert('hello ' + name)
+
+function askQuestion(question, positive, negative) {
+    var response = prompt(question)
+    response = response.toUpperCase();
+    if (response == 'YES' || response == 'Y') {
+        alert(positive);
+        mark = mark + 1;
+    } else {
+        if (response == 'NO' || response == 'N') {
+            alert(negative);
+        }
     }
 }
-//console.log('music', music )
-var sport = prompt('Do you playing any sport ? ')
-sport = sport.toUpperCase();
-if (sport == 'YES' || sport == 'Y') {
-    alert("It's good for your healthy :)");
-    mark = mark + 1 ;  
-} else {
-    if (sport == 'NO' || sport == 'N') {
-        alert("i think it's going to be good if you try to play ");
-    }
-}
-//console.log('sport', sport )
-var food = prompt('Do you have all your meals each day ?breakfast , dinner , and lunch ?s')
-food = food.toUpperCase();
-if (food == 'YES' || food == 'Y') {
-    alert(' Good for you  :)' );
-    mark = mark + 1  ; 
-} else {
-    if (food == 'NO' || food == 'N') {
-        alert("Please try to have it all it's good for your health  ");
-    }
-}
-//console.log( 'food '+food )
-var love = prompt('Have you ever been inlove ?')
-love = love.toUpperCase();
-if (love == 'YES' || love == 'Y') {
-    alert('love is life  <3') ;
-    mark = mark + 1 ; 
-} else {
-    if (love == 'NO' || love == 'N') {
-        alert('Wish that you will oneday :) ');
-    }
-}
-//console.log('love', love ) ;
-var kid = prompt('Do you like kids?')
-kid = kid.toUpperCase();
-if (kid == 'YES' || kid == 'Y') {
-    alert("They're cute  :D ");
-     mark = mark + 1 ; 
+askQuestion('do you like sweet?', 'yes very much ', 'what is wrong with you ')
+askQuestion('Do you feel relax when you listening to music ?', 'Ohh nice :)', 'it is fine ')
+askQuestion('Do you playing any sport ? ', "It's good for your healthy :)", "i think it's going to be good if you try to play ")
+askQuestion('Do you have all your meals each day ?breakfast , dinner , and lunch ?s', ' Good for you  :)', "Please try to have it all it's good for your health  ")
+askQuestion('Have you ever been inlove ?', 'love is life<3 ', "i wish you will oneday ")
 
 
-} else {
-    if (kid == 'NO' || kid == 'N') {
-        alert(' Oh come on  :) ');
-        mark = mark + 1 ; 
-    }
-}
-//console.log('kid', kid ) ; 
-
-
-
-var year = prompt('Can you guess in which year i was born ?');
+/*var year = prompt('Can you guess in which year i was born ?');
 if (year == 1994) {
    alert('Good , you get it :)');
    mark = mark + 1 ; 
 }
-else {
+else { */
+function loop(year) {
+    var correct = false;
+    for (let i = 0; i < 4; i++) {
+        var year = prompt('Can you guess in which year i was born ?');
+        if (year > 1994) {
+            alert('Too low');
+           // year = prompt('Can you guess in which year i was born ?');
+        }
+        else if (year < 1994) {
+            alert('Too high');
+            //year = prompt('Can you guess in which year i was born ?');
+        } else if (year == 1994) {
+            alert('Good , you get it :)');
+            correct = true;
+            i = 4;
+            mark = mark + 1;
+        } 
+        //  if (correct) {
+        //         alert(' the  correct is 1994 ');
+        //         return year;
+        //     }
+        }
+        if(!correct){
+            alert(' the  correct is 1994 ');
+        }
+        return year ; 
+    }
 
-   var correct = false;
-   for (let i = 0; i < 4; i++) {
-       if (year > 1994) {
-           alert('Too low');
-           year = prompt('Can you guess in which year i was born ?');
-       }
-       else if (year < 1994) {
-           alert('Too high');
-           year = prompt('Can you guess in which year i was born ?');
-       } else if (year == 1994) {
-           alert('Good , you get it :)');
-           correct = true;
-           i = 4;
-           mark = mark + 1 ; 
-       } else {
-           alert(' the  correct is 1994 ');
-       }
-   }
-
-   if (correct == false) {
-       alert(' the  correct is 1994 ');   
-   }
+loop () ;
 
 
-   
-}
+
 
 var favMonth = ['february', 'october', 'december', 'january', 'july', 'april'];
+function guessing(userguessing) {
+    
 
-var userguessing = prompt('What do you think my fav months are ?');
-for (var i = 0; i < favMonth.length; i++) {
 
-    switch (userguessing) {
-        case 'february':
-        case 'october':
-        case 'december':
-        case 'january':
-        case 'july':
-        case 'april':
-            alert('Good job ');
-            mark++;
-            userguessing = prompt('What do you think my fav months are ?');
-            break;
-        default:
-            alert('wrong answer');
-            userguessing = prompt('What do you think my fav months are ?');
+    var userguessing = prompt('What do you think my fav months are ?');
+    for (var i = 0; i < favMonth.length; i++) {
 
+        switch (userguessing) {
+            case 'february':
+            case 'october':
+            case 'december':
+            case 'january':
+            case 'july':
+            case 'april':
+                alert('Good job ');
+                mark++;
+                userguessing = prompt('What do you think my fav months are ?');
+                break;
+            default:
+                alert('wrong answer');
+                userguessing = prompt('What do you think my fav months are ?');
+
+        }
     }
+    return userguessing ;
 }
-alert(' my fav months is ' + favMonth);
-alert('your point is ' + mark);
+guessing();
+    alert(' my fav months is ' + favMonth);
+    alert('your point is ' + mark);
+
