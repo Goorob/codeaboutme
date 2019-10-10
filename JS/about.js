@@ -78,7 +78,7 @@ function guessing(userguessing) {
             case 'april':
                 alert('Good job ');
                 mark++;
-                userguessing = prompt('What do you think my fav months are ?');
+                i=favMonth.length;
                 break;
             default:
                 alert('wrong answer');
