@@ -1,25 +1,69 @@
 body {
-    background-color: blanchedalmond ;
-
-}
-header {
-    color: aqua ;
-    text-align: center ; 
-    text-shadow: 70px ;
     
+background-image: url("Sunset-on-Long-Beach-Koh-Rong-Island-in-Cambodia-4.jpg");
+background-size: 500px 800px;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: top right;
+ } 
+#head {
+    border: 5px solid grey;
+    border-radius: 5px;
+    font-size: 7em;
+    color: black;
+    text-align:right ; 
+    text-shadow: 5px 5px gray  ;
+    letter-spacing: 15px ;
+    font-family: "Times New Roman";
+    text-align: center;
 }
 
-section {
-    color: gray ;
-    
+span {
+    color: rgb(69, 98, 160) ;
+    text-align: right;
+font-size: 1em;
+text-align-last:left;
+}
+.about {
+ color :grey;
+ text-shadow: 2px 2px  ;
+ text-align: right;
+ font-family: "Times New Roman";
+ font-size: 1em;
+ text-align-last: left;
+}
+.top{
+    color :gray; 
+ text-shadow: 2px 2px   ;
+    text-align: right;
+    font-family: "Times New Roman";
+    font-size: 1em;
+}
 
-}
-p {
-  color :purple ; 
- background-color : grey ; 
- text-align: center ; 
-}
-ul  {
-    color: grey ;
+
+.learn {
+ color :gray; 
+ text-shadow: 2px 2px   ;
+    text-align: right;
+    font-family: "Times New Roman";
+    font-size: 1em;
     
+   
+}
+section{
+    
+    color:saddlebrown;
+    font-size: 1.5em;
+}
+ul li { 
+    color : saddlebrown ;
+    padding: 5px;
+    margin: 5px ;
+    font-size: 1.5em;
+}
+ol li { 
+    color : saddlebrown ; 
+    padding: 5px;
+    margin: 5px ;
+    font-size: 1.5em;
 }
